@@ -62,3 +62,74 @@ ylab = "name of y axis"
 BAR CHARTS
 ####################################################################################
 
+insert the dataset package.
+then see the mtcars {?mtcar}
+{head(mtcars)}
+
+see following example that does not work that way. try it out. then look for how to plot a correct bar chart
+{barplot(mtcars$cyl)}
+
+make and table of the varible you need. then put it in a container frame using <- symbol
+you can barplot the container. note that if you use plot instead of bar plot you will get a line chart.
+
+{
+cylinders <- table(mtcars$cyl)
+barplot(cylinders)
+plot(cylinder)
+}
+
+####################################################################################
+HISTOGRAM
+####################################################################################
+
+for data that is quantitative, scaled, measured, interval or ratio level.
+it allow you to see what you have : you can see
+shape - shape of the distribution
+gaps - big empty space in distribution
+outliers - unusual scores that can distort the data
+symmetry - things like whether we have same number of high and low scores or do we have to do some adjustment
+ 
+{
+hist(iris$Sepal.Length)
+hist(iris$Sepal.Width)
+}
+
+**lets see few histograms in onescreen as a grouop. that is more radable in datascince works
+
+# put graphs in 3 rows and 1 column
+
+we are doing it by changing a parameter 'mfrow' (multi frame row layout). here 'c' means concatanate which means treat this two numbers as one unit. first number is number of rows and second number is number of columns
+
+{par(mfrow = c(3,1))}
+
+now make the three histogrames seperately using a selector. which you select the specific categeory in squrebrackets. note that if you want a better comparison make a same limit for all x axis of histograms using 'xlim'. they will show in one image.
+
+{
+#1
+hist(iris$Petal.Width p[iris$Speciessss == "setosa"],
+ xlim = c(0,3),
+ breaks = 9,
+ main = "Petal Width for Setosa",
+ xleb = "",
+ cols = "red"
+)
+
+hist(iris$Petal.Width p[iris$Speciessss == "versicolor"],
+ xlim = c(0,3),
+ breaks = 9,
+ main = "Petal Width for versicolor",
+ xleb = "",
+ cols = "purple"
+)
+
+hist(iris$Petal.Width p[iris$Speciessss == "virginica"],
+ xlim = c(0,3),
+ breaks = 9,
+ main = "Petal Width for virginica",
+ xleb = "",
+ cols = "blue"
+)
+}
+
+**note : if you changed a graphical parameter , remember to make it default.**
+{par(mfrow=c(1,1))}
