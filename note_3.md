@@ -13,7 +13,7 @@ NOTE:for better presentation do graphical(graph) first then numbers.
 {
 install.packages("pacman")
 
-pacman::p_load(pacman,dplyr,GGally,ggplot2,ggthemes,ggvis,httr,lubridate,p;otly,rio, rmarkdown,shiny,stingr,tidyr)
+pacman::p_load(pacman,dplyr,GGally,ggplot2,ggthemes,ggvis,httr,lubridate,plotly,rio, rmarkdown,shiny,stingr,tidyr)
 
 library(datasets)
 head(iris)
