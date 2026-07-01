@@ -39,3 +39,27 @@ we can use 'curve' to draw the curve.
 'lwd' here is a command for adjusting the line width
 
 'add = TRUE' is the command to make it top on the previous graph
+
+curve(dnorm(x, mean = mean(lynx)m sd = sd(lynx)),
+    col = "thistle4",
+    lwd = 2,
+    add = TRUE
+)
+
+now lets do something cool. lets add 'kernel density estimator to our graph'. this things are also like bell curves but they try to follow the distribution of data.
+
+here we use 'lines' to draw
+we use 'density' to get density estimator
+and we can add more attributes if we want
+further we can give 'adjust' parameter values to density estimator. it adjust how well it should be fit to be a bell curve.
+
+{
+lines(density(lynx) ,col ="blue",lwd=2)
+lines(density(lynx,adjust = 3), col = "purple", lwd = 2)
+}
+
+we can further add a rug. it plot for each individual data oint undrt the x axis. for that
+
+{
+rug(lynx,lwd=2,col ="gray")
+}
