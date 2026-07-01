@@ -29,3 +29,36 @@ confirmation : {require(pacman)}
 load : {library(pacman)} : {pacman::p_load(pacman,dplyr,....)}
 
 unload : {p_unload(dplyr,tidr,...)} : {p_unload(all)} : for base packages {detach("package:datasets",unload = TRUE)}
+
+####################################################################################
+PLOT
+####################################################################################
+load R01_3_1_plot().R script
+
+lets add the dataset that comes with R to our script
+	{library(datasets)}
+see the first few lines of iris dataset
+	{head(iris)}
+if you need help of plot command prefix ? before plot : {?plot}
+
+examples/
+to see categorical variables in dataset : plot(iris$Species)
+to see quantitative variables in dataset : plot(iris$Petal.length)
+
+plot attributes: col =  "#cc0000" //hex code
+pch = 19 (point character)solid circles for points
+main "main title"
+xlab = "name of x axis"
+ylab = "name of y axis" 
+
+**plot command not only plot data. we can plot formulas as well.**
+{plot(cos,0,2*pi) means plot cos function from zero to two times pi}
+{plot(exp, 1, 5) means plot exponential function one to five}
+{plot(dnorm, -3, 3) meas plot normal distribution from -3 to 3}
+
+'lwd' attribute can be used with 'dnorm' to set the width of the plotting line.
+
+####################################################################################
+BAR CHARTS
+####################################################################################
+
