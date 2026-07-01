@@ -72,6 +72,8 @@ see following example that does not work that way. try it out. then look for how
 make and table of the varible you need. then put it in a container frame using <- symbol
 you can barplot the container. note that if you use plot instead of bar plot you will get a line chart.
 
+truely we are plotting a frequency chart here: table convert the data into frequency table. 
+
 {
 cylinders <- table(mtcars$cyl)
 barplot(cylinders)
@@ -133,3 +135,40 @@ hist(iris$Petal.Width p[iris$Speciessss == "virginica"],
 
 **note : if you changed a graphical parameter , remember to make it default.**
 {par(mfrow=c(1,1))}
+
+
+####################################################################################
+SCATTERPLOTS
+####################################################################################
+
+For visualizing the association between two quantitative variables.
+
+why :
+1 to check whether there is any linearity between the variables
+2 how much spreaded the data points along axies
+3 so see whether there are outliers
+4 to find the correlation between the variable
+
+just use generic 'plot' command with two quantitative variables. 
+
+{
+library(datasets)
+?mtcars
+head(mtcars)
+
+hist(mtcars$wt) //wt means weight
+hist(mtcars$mpg) // mpg means miles per galloon
+
+plot(mtcars$wt,mtcars$mpg)
+
+plot(mtcars$wt,mtcars$mpg,
+pch = 19, //solid circle
+cex = 1.5,
+col = "#cc0000",
+main = "MPG as a Function of Weight of cars",
+xlab = "Weight (in 1000 pounds),
+ylab = "MPG"
+"
+}
+
+
