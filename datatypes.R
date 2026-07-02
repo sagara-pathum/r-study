@@ -40,3 +40,31 @@ m1
 m2 <- matrix(c("a","b","c","d"),row = 2,byrow = TRUE)
 m2
 
+a1 <-array(c(1:24),c(4,3,2))
+a1
+
+
+##coercion
+
+coerce1 <- c(1,"v",T)
+typeof(coerce1)
+
+coerce2 <- 5
+
+typeof(coerce2)
+
+coerce3 <- as.integer(5)
+typeof(coerce3)
+
+coerce4 <- c("1","2","3")
+typeof(coerce4)
+
+coerce5 <- as.numeric(c("1","2","3"))
+typeof(coerce5)
+
+coerce6 <- matrix(1:9, nrow = 3)
+coerce6
+is.matrix(coerce6)
+
+coerce7 <- as.data.frame(matrix(1:9,nrow = 3,byrow = T))
+coerce7
