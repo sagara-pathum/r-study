@@ -136,3 +136,34 @@ we can enter list inside a list as well
 
 list2 <- list(o1,o2,o3,list1)
 list2
+
+##COERCION - converting data 
+
+1. goes to least restrictive datatype
+
+(coerce1 <- c(1, "b", T))
+typeof(coerce)
+
+2.coerce numeric to integer
+
+(coerce2 <- 5)
+typeof(coerce2)
+
+(coerce3 <- as.integer(5))
+typeof(coerce3)
+
+3. coerce character to numeric
+
+(coerce4 <- c("1","2","3"))
+typeof(coerce4)
+
+(coerce5 <- as.numeric(c("1","2","3")))
+typeof(coerce)
+
+4. coerce matrix to dataframe
+
+(coerce6 <- matrix(1:9, nrow=3))
+is.matrix(coerce6)
+
+(coerce7 <- as.data.frame(matrix(1:9,nrow=3)))
+coerce7 //here it automatically assign the variable names
