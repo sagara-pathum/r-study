@@ -91,11 +91,12 @@ m1
 
 m2 <- matrix(c("a","b","c","d"),nrow =2, byrow =TRUE)
 m2
-
+//byrow true kalama diga athata purawa purawa enne. naththm default thiyenne pahala athata purawanna
 
 **array
 
 here we have used : operator to say i want 1 through 24
 
 a1 <- array(c(1:24), c(4,3,2)) // second part here is dimention of the array. it is in format of (rows,cols,tables)
+
 a1
