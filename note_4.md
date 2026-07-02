@@ -100,3 +100,39 @@ here we have used : operator to say i want 1 through 24
 a1 <- array(c(1:24), c(4,3,2)) // second part here is dimention of the array. it is in format of (rows,cols,tables)
 
 a1
+
+**dataframe
+
+data frame can take defferent type of vectors. so lets initialize some vectors
+
+vNumeric <- c(1,2,3)
+vCharacter <- c("a","b","c")
+vLogical <- c(T,F,T)
+
+now lets bind them using column bind 'cbind' command
+
+dfa <- cbind(vNumeric,vCharacter,vLogical)
+dfa
+
+see here if we use 'cbind' it is convert every data into most generic type it can. not to do so we should tell it to cosider vectors data combination as a dataframe. using 'as.data.frame'
+
+df <- as.data.frame(cbind(vNumeric,vCharacter,vLogical))
+df
+
+**list
+
+lets make three object here
+
+o1 <-c(1,2,3)
+o2 <-c("a","b","c","d")
+o3 <-c(T,F,T,T,F)
+
+now make them a list of objects
+
+list1 <- list(o1,o2,o3)
+list1
+
+we can enter list inside a list as well
+
+list2 <- list(o1,o2,o3,list1)
+list2
